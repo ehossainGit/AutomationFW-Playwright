@@ -1,0 +1,26 @@
+
+[
+    {
+        "firstName":"FN1",
+        "lastName":"LN1",
+        "dob":"12/12/2221",
+        "addressline1":"a1",
+        "city":"cx1",
+        "state":"ct",
+        "zip5":"12345",
+        "user":"user1QA",
+        "password":"pw1QA"
+    },
+    {
+        "firstName":"FN2",
+        "lastName":"LN2",
+        "dob":"12/12/2222",
+        "addressline1":"a2",
+        "city":"y",
+        "state":"ct",
+        "zip5":"12345",
+        "user":"user2QA",
+        "password":"pw2QA"
+    }
+
+]

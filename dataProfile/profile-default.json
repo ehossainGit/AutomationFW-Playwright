@@ -1,0 +1,8 @@
+
+{
+    "testEnvName":"QA",
+    "url":"https://bonigarcia.dev/selenium-webdriver-java/login-form.html",
+    "user":"user1",
+    "password":"pw1"
+}
+
