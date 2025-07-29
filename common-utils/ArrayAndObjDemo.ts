@@ -9,7 +9,7 @@ export class ArrayAndListDemo {
 
     constructor() {
         let numbers: number[] = [1, 2, 3];
-        let strings: string[] = ['apple', 'banana', 'cherry'];
+        let fruits: string[] = ['apple', 'banana', 'cherry'];
         let booleans: boolean[] = [true, false, true];
     }
     

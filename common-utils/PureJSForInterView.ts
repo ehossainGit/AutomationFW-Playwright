@@ -30,7 +30,8 @@ export function demoObject(): void {
     const person = {
         name: 'Alice',
         age: 30,
-        city: 'New York'
+        city: 'New York',
+        email:'tbd'
     };
 
     // Add a new property
@@ -40,7 +41,7 @@ export function demoObject(): void {
     person.age = 31;
 
     // Delete a property
-    delete person.city;
+    // delete person.city;
 
     // Iterate over properties
     for (const key in person) {
