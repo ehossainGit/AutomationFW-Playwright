@@ -3,11 +3,12 @@
 //ref: https://date-fns.org/docs/Getting-Started#installation
 import { format, compareAsc } from "date-fns";
 import * as fs from 'fs';
+import * as path from 'path';
 
 
 export class ReadWriteJson {
-    jsonFilePath:string = "C:/Playwright/AutomationFW-Playwright/data/dataInKeyValPairForSave.json";
-    testData:object;
+    jsonFilePath: string = path.resolve(__dirname, "../data/dataInKeyValPairForSave.json");
+    testData: object;
     constructor() {
         this.testData = JSON.parse(JSON.stringify(require(this.jsonFilePath)));
     }
@@ -17,11 +18,11 @@ export class ReadWriteJson {
        return this.testData;
     
     }
-
     getJsonProperty(prop: string) {
 
-       return this.testData["prop"];
+       return this.testData[prop];
     
+    }
     }
     
     updateJsonProperty(prop: string, value:string) {
