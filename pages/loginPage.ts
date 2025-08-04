@@ -7,6 +7,7 @@ export class LoginPage {
       
     }
    
+
     async login(user, password) {
         await this.page.getByRole('textbox', { name: 'Login' }).click();
         await this.page.getByRole('textbox', { name: 'Login' }).fill(user);

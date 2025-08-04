@@ -1,13 +1,14 @@
-import { Page } from "@playwright/test";
+import { test, expect, type Page } from '@playwright/test';
 
-export class LoginPage{
+
+export class HomePage {
 
     constructor(private page: Page) {
         this.page = page;
     }
-
-    async openApplication(url: string) {
-        await this.page.goto(url);
+    
+    async openApplication(url:string) {
+       await this.page.goto(url);
     }
 
     async login(user, password) {

@@ -1,6 +1,6 @@
 import {test as baseTest} from '@playwright/test';
-import {LoginPage} from '../pages/LoginPage';
-import {HomePage} from '../pages/HomePage';
+import {LoginPage} from '../pages-OrangeHR/LoginPage';
+import {HomePage} from '../pages-OrangeHR/homePage.ts';
 
 // This file contains Playwright fixtures for testing purposes
 // You can define custom fixtures here that can be used in your tests
