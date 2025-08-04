@@ -2,7 +2,7 @@
 import { faker } from '@faker-js/faker/locale/en';
 import { format, compareAsc } from "date-fns";
 import { test, expect } from '@playwright/test';
-import { DateUtil } from '../../helpers/Util';
+import { DateUtil } from '../../common-utils/Util';
 import * as fs from 'fs';
 
 //ref: https://date-fns.org/docs/Getting-Started#installation

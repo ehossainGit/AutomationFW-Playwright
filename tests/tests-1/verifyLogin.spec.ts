@@ -4,7 +4,7 @@ import { test, expect, type Page } from '@playwright/test';
 import { HomePage } from '../../pages/HomePage';
 import { LoginPage } from '../../pages/LoginPage';
 
-const testData = JSON.parse(JSON.stringify(require('../../dataProfile/profile-default.json')));
+const testData = JSON.parse(JSON.stringify(require('../../data/profile-default.json')));
 
 test('open app', async ({ page }) => {
   const homePage = new HomePage(page);

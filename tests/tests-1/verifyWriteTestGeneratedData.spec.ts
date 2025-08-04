@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 //import { writeFileSync } from "fs";
 import * as fs from 'fs';
-import { ReadWriteJson } from '../../helpers/ReadWriteJson';
-import { DateUtil } from '../../helpers/Util';
+import { ReadWriteJson } from '../../common-utils/ReadWriteJson';
+import { DateUtil } from '../../common-utils/Util';
 
 
 

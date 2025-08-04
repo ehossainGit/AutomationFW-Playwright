@@ -23,7 +23,7 @@ export class ReadWriteJson {
        return this.testData[prop];
     
     }
-    }
+
     
     updateJsonProperty(prop: string, value:string) {
 

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 
-const testData = JSON.parse(JSON.stringify(require('../../dataProfile/profile-default.json')));
+const testData = JSON.parse(JSON.stringify(require('../../data/profile-default.json')));
 
 test('test', async ({ page }) => {
 
