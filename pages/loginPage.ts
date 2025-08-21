@@ -2,13 +2,13 @@ import { test, expect, type Page } from '@playwright/test';
 
 export class LoginPage {
     readonly page: Page;
-    constructor(page) {
+    constructor(page:Page) {
       this.page = page;
       
     }
    
 
-    async login(user, password) {
+    async login(user:string, password:string) {
         await this.page.getByRole('textbox', { name: 'Login' }).click();
         await this.page.getByRole('textbox', { name: 'Login' }).fill(user);
 
