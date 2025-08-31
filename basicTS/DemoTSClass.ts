@@ -1,8 +1,8 @@
 export class Person {
     private name: string;
     private arr: Array<string> = ["Apple", "Orange", "Mango"];
-    private car: { type: string, model: string, year: number } = {
-        type: "Toyota",
+    private car: { make: string, model: string, year: number } = {
+        make: "Toyota",
         model: "Corolla",
         year: 2009
       };
@@ -20,12 +20,13 @@ export class Person {
         return a+b;
     }
 
-    public addElementToArr(elem: string){
-        this.arr[0] = elem;
+    public addElementToArr(elem: string): number {
+        // this.arr[0] = elem;
+        return this.arr.push(elem);
     }
 
     public printArr(){
-        console.log(this.arr[0]);
+        console.log(this.arr.toString());
     }
 
     public printObj(){

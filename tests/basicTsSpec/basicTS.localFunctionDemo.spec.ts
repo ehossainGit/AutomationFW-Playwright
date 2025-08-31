@@ -2,24 +2,22 @@ import {test, expect} from '@playwright/test';
 
 
 
-test.describe('TSBasic', () => {
+test.describe('For testing TS Basics', () => {
   test('should have a basic test', async ({  }) => {
-    // reverseString();
+    console.log('result: '+ reverseString('this is a test string'));
     // console.log(sortStringWithoutSort("playwright")); // Output: "aghilprtyw"();
-    searchChar();
+    // console.log(searchChar('unknown', ['d', 'x', 'm', 'v']));
   });
 });
 
-// This function reverses a given string by iterating through its characters
-// and constructing a new string in reverse order.
-function reverseString(): void {
-    const s = "this is a test string";  
-    const chars = s.split(''); // Convert string to array of characters
-    let revStr = ""; // Initialize an empty string for the reversed string
-    for (const c of chars) { // Iterate over each character
-        revStr = c + revStr; // Prepend the character to the reversed string
+
+function reverseString(str:string): string {
+    const chars = str.split('');
+    let revStr = "";
+    for (const c of chars) {
+        revStr = c + revStr;
     }
-    console.log(revStr); // Output the reversed string
+    return revStr;
 }
 
 
@@ -42,13 +40,12 @@ function sortStringWithoutSort(str: string): string {
     return chars.join('');
 }
 
-function searchChar():void {
-    const chars = ['d', 'x', 'm', 'v'];
+function searchChar(key:string, arr:string[]):string {
     let count = 0;
-    for(const c of chars) {
-        if(c==='v') {
+    for(const c of arr) {
+        if(c === key) {
             count++;
         }
     }
-    console.log(count);
+    return count > 0 ? `${key} found` : `${key} not found`;
 }
