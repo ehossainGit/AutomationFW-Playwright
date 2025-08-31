@@ -1,4 +1,4 @@
-write a typescript class that demonstrates basic TypeScript features
+//write a typescript class that demonstrates basic TypeScript features
 export class TypeScriptDemo {
     // Properties
     private name: string;
