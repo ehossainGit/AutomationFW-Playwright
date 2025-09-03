@@ -7,6 +7,8 @@ test.describe('API01 Demo', () => {
       const response = await request.get('https://conduit-api.bondaracademy.com/api/tags');
       expect(response.ok()).toBeTruthy();
       const responseJson = await response.json();
+      const responseMessage = await responseJson.message
+      console.log('Response Body:', responseMessage);
       expect(responseJson).toHaveProperty('tags');
       expect(responseJson.tags[0]).toBe('Test');
 
