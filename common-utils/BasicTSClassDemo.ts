@@ -12,6 +12,9 @@ export class BasicDemo {
     dob:Date;
     
     constructor() {
+        this.name="John Doe";
+        this.underAge=false;
+        this.dob=new Date('2000-01-01');
         this.start();
     }
     

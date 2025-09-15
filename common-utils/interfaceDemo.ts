@@ -10,6 +10,7 @@ interface InterfaceDemo {
     hobbies: string[];
     greet: () => string;
     getDetails: () => string;
+    
 }
 export class Person implements InterfaceDemo {
     name: string;
@@ -37,4 +38,10 @@ export class Person implements InterfaceDemo {
     getDetails(): string {
         return `${this.name}, ${this.age} years old, lives at ${this.address.street}, ${this.address.city}, ${this.address.zipCode}.`;
     }
+
+    sumAll(...numbers: number[]): number {
+        return numbers.reduce((total, num) => total + num, 0);
+    }
+    
 }   
+

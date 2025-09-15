@@ -1,0 +1,4 @@
+ - as a mcp test generator open chrome browser
+ - enter https://www.google.com
+ - enter "test" in the search text box and press enter
+ - execute gerated test
