@@ -7,15 +7,15 @@ export class JsonToObj {
           console.log('hello world');
         }
 
-        args: {};
-        data: "";
-        files: {};
-        form: {
+        args: {} = {};
+        data: string = "";
+        files: {} = {};
+        form: {someHash:string, secondHash:string} = {
           someHash: "7654321",
           secondHash: "987654321asdfgh"
         };
 
-        headers: {
+        headers: {} = {
           xforwardedproto: "https",
           host: "postman-echo.com",
           contentlength: "43",
@@ -29,11 +29,11 @@ export class JsonToObj {
           xforwardedport: "443"
         };
 
-        json: {
+        json: {someHash:string, secondHash:string} = {
           someHash: "7654321",
           secondHash: "987654321asdfgh"
         };
-        url: "https://postman-echo.com/post"
+        url:string= "https://postman-echo.com/post";
 
         print() :void {
           console.log(this.json);
