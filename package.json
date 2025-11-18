@@ -9,8 +9,9 @@
   "description": "",
   "devDependencies": {
     "@faker-js/faker": "^9.6.0",
-    "@playwright/test": "^1.55.0",
-    "@types/node": "^22.13.9"
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^22.13.9",
+    "playwright": "^1.56.0"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
