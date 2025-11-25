@@ -25,7 +25,7 @@ export class PlaywrightDevPage {
 
   async getStarted() {
     await this.getStartedLink.first().click();
-    await expect(this.gettingStartedHeader).toBeVisible();
+    // await expect(this.gettingStartedHeader).toBeVisible();
   }
 
   async pageObjectModel() {

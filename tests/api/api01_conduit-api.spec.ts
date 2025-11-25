@@ -6,16 +6,16 @@ test.describe('API01 Demo', () => {
     test('should fetch user data from API', async ({request}) => {
       const response = await request.get('https://conduit-api.bondaracademy.com/api/tags');
       expect(response.ok()).toBeTruthy();
-      const responseJson = await response.json();
-      const responseMessage = await responseJson.message
+      const responseJsonBody = await response.json();
+      const responseMessage = await responseJsonBody.message
       console.log('Response Body:', responseMessage);
-      expect(responseJson).toHaveProperty('tags');
-      expect(responseJson.tags[0]).toBe('Test');
+      expect(responseJsonBody).toHaveProperty('tags');
+      expect(responseJsonBody.tags[0]).toBe('Test');
 
       expect(response.status()).toBe(200);
       const body = await response.text();
       console.log('Response Body:', body);
-      console.log(responseJson);
+      console.log(responseJsonBody);
     });
     
     test('should fetch user data from API2', async ({request}) => {

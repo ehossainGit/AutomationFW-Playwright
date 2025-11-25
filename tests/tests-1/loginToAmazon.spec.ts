@@ -1,9 +1,5 @@
 /** Open the App */
 import { test, expect } from '@playwright/test';
-//import { LoginPage } from '../pages/LoginPage';
-
-//const testData = JSON.parse(JSON.stringify(require('../dataProfile/profile-default.json')));
-
 
 test('open app', async ({ page }) => {
 

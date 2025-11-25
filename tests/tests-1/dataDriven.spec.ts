@@ -1,7 +1,13 @@
 import { test, expect } from '@playwright/test';
-const testData = JSON.parse(JSON.stringify(require('../../data/dataInRowForDataDrivenTest.json')));
+import * as fs from 'fs';
+import * as path from 'path';
 
-  interface dataArray {
+// import testData from '../../data/dataInRowForDataDrivenTest.json';
+
+
+test.describe('Data Driven Test Suite', () => { 
+
+  interface MyData {
     firstName:string;
     lastName:string;
     dob:string;
@@ -13,18 +19,37 @@ const testData = JSON.parse(JSON.stringify(require('../../data/dataInRowForDataD
     password:string;
   }
 
-  //const list = testData.keys();
+let data: MyData[] = [];
 
-  test('test', async ({ page }) => {
-    testData.forEach((dataArray, rowIndex) => {
+ const filePath: string = path.join(process.cwd(), 'data', 'dataInRowForDataDrivenTest.json'); // Path to your JSON file
 
-      //console.log(`Row# ${rowIndex}: ${JSON.stringify(dataArray)}`);//replace this statement with actions
-      
+  fs.readFile(filePath, 'utf8', (err, jsonString): MyData => {
+    if (err) {
+      console.error('Error reading file:', err);
+      return;
+    }
+    try {
+      data = JSON.parse(jsonString);
+      console.log('JSON data:', data);
+      // You can now work with the 'data' object
+      // return data;
+    } catch (parseError) {
+      console.error('Error parsing JSON:', parseError);
+    }
+  });
+
+
+  // const list = data.keys();
+
+  test('test', async ({  }) => {
+    console.log('Array size: '+ data.length);
+
+    data.forEach((dataArray, rowIndex) => {
       console.log(`Row# ${rowIndex}: ${JSON.stringify(dataArray.firstName)} - ${JSON.stringify(dataArray.lastName)}`);//replace this statement with actions
-      
-      
-      
     });
 
-
   });
+
+
+
+});

@@ -13,25 +13,25 @@ export class ReadWriteJson {
         this.testData = JSON.parse(JSON.stringify(require(this.jsonFilePath)));
     }
     
-    getJsonObj() {
+    getJsonObj(): object {
 
        return this.testData;
     
     }
-    getJsonProperty(prop: string) {
+    // getJsonProperty(prop: string): string {
 
-       return this.testData[prop];
+    //    return this.testData.prop;
     
-    }
+    // }
 
     
-    updateJsonProperty(prop: string, value:string) {
+    // updateJsonProperty(prop: string, value:string) {
 
-        this.testData[prop]=value;
-        const jsonString = JSON.stringify(this.testData, null, 2);
-        fs.writeFileSync(this.jsonFilePath, jsonString, {
-            flag: "w"
-        });
-     }
+    //     this.testData[prop]=value;
+    //     const jsonString = JSON.stringify(this.testData, null, 2);
+    //     fs.writeFileSync(this.jsonFilePath, jsonString, {
+    //         flag: "w"
+    //     });
+    //  }
     
 }

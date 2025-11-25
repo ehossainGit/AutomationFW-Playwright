@@ -2,8 +2,8 @@ import { test, expect, type Page } from '@playwright/test';
 
 
 export class HomePage {
-
-    constructor(private page: Page) {
+    page: Page;
+    constructor(page: Page) {
         this.page = page;
     }
     
@@ -11,7 +11,7 @@ export class HomePage {
        await this.page.goto(url);
     }
 
-    async login(user, password) {
+    async login(user: string, password: string) {
         await this.page.getByRole('textbox', { name: 'Username' }).click();
         await this.page.getByRole('textbox', { name: 'Username' }).fill(user);
 

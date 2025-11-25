@@ -10,9 +10,9 @@ test('open app', async ({ page }) => {
 
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
-await page.getByText('Forgot your password?').click();
+  await page.getByText('Forgot your password?').click();
 
-await expect(page.getByRole('heading', { name: 'Reset Password' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Reset Password' })).toBeVisible();
 
 
   const text = await page.getByRole('heading', { name: 'Reset Password' }).textContent();
