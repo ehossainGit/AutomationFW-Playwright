@@ -48,4 +48,16 @@ test.describe('For testing TS Basics', () => {
 
   }
 
+  function filterSpecialChars(inputString: string): string {
+    // The regular expression /[^a-zA-Z0-9\s]/g matches any character
+    // that is NOT (indicated by ^ inside the brackets) a letter (a-zA-Z),
+    // a number (0-9), or a whitespace character (\s).
+    // The 'g' flag ensures that all occurrences are replaced, not just the first.
+    return inputString.replace(/[^a-zA-Z0-9\s]/g, '');
+  }
+
+  // const originalString = "Hello, World! 123 @#$%";
+  // const filteredString = filterSpecialChars(originalString);
+  // console.log(filteredString); // Output: Hello World 123
+
 });
