@@ -19,6 +19,16 @@ test.describe("String Manipulation Demo", () => {
         // Check length
         expect(replacedString.length).toBe(13);
     });
+    test("replace demo", async () => {
+        let str = "Hello, world! 123_$";
+        let result = str.replace(/[\W_]/g, ''); //\W matches any non-word character, _ is included in the regex pattern
+        //\w vs \W: \w matches any word character (alphanumeric and underscore such as a-z0-9), \W matches any non-word character
+        //g flag is used to replace all occurrences, not just the first one
+
+        console.log(result);
+        // Output: "Helloworld123"
+
+    });
 });
 
 //local functions:

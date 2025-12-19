@@ -1,14 +1,33 @@
 import {test, expect} from '@playwright/test';
 
+
+
 test.describe('For testing TS Basics', () => {
 
   test('should call Array methods', async ({  }) => {
-    console.log('result: '+ declareArray());
-    
+    // console.log('result: '+ declareArray());
+  //  console.log( reverseArr2());
+    // const reversedArr = (arr: String[]) => [...arr].reverse();
+    // console.log( reversedArr(['apple', 'banana', 'cherry'] ));
+    // console.log( revesredStr('apple' ));
+    // console.log((() => 'apple'.split('').reverse().join())());
+    const arr: Array<string> = ['apple','banana', 'cherry'];
+    Array.from(arr, (e) => {console.log(e);});
   });
 
 
   //Local functions:
+  // const reversedArr = (arr: String[]) => [...arr].reverse();
+  const reverseArr2 = () => {
+    const fruits: Array<string> = ['apple', 'banana', 'cherry'];
+    const reversedFruits = fruits.reverse();
+    return reversedFruits;
+  }
+
+  const revesredStr = (str: string) => str.split('').reverse().join('');
+
+
+
   function declareArray(): void {
     let numbers: number[] = [1, 2, 3, 4, 5];
     let fruits: Array<string> = ['apple', 'banana', 'cherry'];
@@ -47,7 +66,11 @@ test.describe('For testing TS Basics', () => {
     console.log('result:'+ reversedNumbers); // Output: [5, 4, 3, 2, 1]
 
   }
-
+//filter
+  function filterArray(arr: number[]): number[] {
+    return arr.filter(num => num > 0);
+  }
+  
   function filterSpecialChars(inputString: string): string {
     // The regular expression /[^a-zA-Z0-9\s]/g matches any character
     // that is NOT (indicated by ^ inside the brackets) a letter (a-zA-Z),
